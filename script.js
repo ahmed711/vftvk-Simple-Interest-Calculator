@@ -8,7 +8,7 @@ function compute()
     var result = `<br><br>
                   if you deposit ${p}, <br>
                   at an interest of ${rate}%. <br>
-                  You will receive an amount of ${parseFloat(p) + parseFloat(interest)}, <br>
+                  You will receive an amount of ${parseFloat(interest)}, <br>
                   in the year ${year}`
     document.getElementById("result").innerHTML=result
     document.getElementById("principal").focus();
