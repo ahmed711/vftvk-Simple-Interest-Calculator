@@ -5,10 +5,10 @@ function compute()
     var years = document.getElementById("years").value;
     var interest = p * years * rate /100;
     var year = new Date().getFullYear()+parseInt(years);
-    while (p <= 0 | typeof p === "undefined"){
+    if (p <= 0 | typeof p === "undefined"){
         alert("Please Enter a positive number")
         document.getElementById("principal").focus();
-    }
+    } else {
     var result = `<br><br>
                   if you deposit <mark>${p}</mark>, <br>
                   at an interest of <mark>${rate}%</mark>. <br>
@@ -16,6 +16,7 @@ function compute()
                   in the year <mark>${year}</mark>.`
     document.getElementById("result").innerHTML=result
     document.getElementById("principal").focus();
+    }
 }
 function updateRate() 
 {
